@@ -2,7 +2,7 @@
 
 **项目**：WeBot 企业知识库助手 Demo Dataset
 **版本**：v2（新增决策反复链 + 性能基准多版本）
-**数据**：6周 / 5人团队 / 92个文件 / 4条主线
+**数据**：6周 / 5人团队 / 94个文件 / 4条主线
 **目标**：客观评估两种架构在不同任务类型上的表现差异
 
 ---
@@ -18,7 +18,7 @@
 
 ### 1.2 数据相同
 
-两套系统使用**完全相同的原始文件**（92个），确保对比的是架构能力差异。
+两套系统使用**完全相同的原始文件**（94个），确保对比的是架构能力差异。
 
 ### 1.3 评测模型相同
 
@@ -265,9 +265,10 @@
 
 ```bash
 mkdir -p ~/rag_benchmark/docs
-# 全部文件
-cp output/phase_m*/sources/* ~/rag_benchmark/docs/
-```
+# 全部文件（直接取 output/phase_mX/ 下的文件）
+cp output/phase_m1/* ~/rag_benchmark/docs/
+cp output/phase_m2/* ~/rag_benchmark/docs/
+# ... 以此类推
 
 ### Step 2：向量数据库构建
 
@@ -313,7 +314,7 @@ def rag_query(question, k=5):
 | Round 3 | M1 + M2 + M3（26个文件） | + A2（完整）, C3（部分）, D1（完整） |
 | Round 4 | M1~M4（48个文件） | + B2, B3, C1, C2, E1, P1 |
 | Round 5 | M1~M5（72个文件） | + E2, E3, P2 |
-| Round 6 | M1~M6（92个文件） | 全部问题 |
+| Round 6 | M1~M6（94个文件） | 全部问题 |
 
 ---
 
@@ -324,6 +325,8 @@ def rag_query(question, k=5):
 ```bash
 mkdir -p wiki/raw/sources wiki/entities wiki/concepts wiki/decisions wiki/meetings wiki/stakeholders wiki/synthesis wiki/queries
 ```
+
+> 注：以上为 llm_wiki 内部目录结构，用户无需手动创建。实际导入通过界面 Import 按钮完成。
 
 ### Step 2：Agent 处理（核心步骤）
 
@@ -362,11 +365,11 @@ Agent 对每个文件执行：
 | M3 | 12 | +Somi_FAISS私有化测试结果.txt（date_15）|
 | M4 | 22 | +Dave_正式切换Milvus.txt（date_22）；+Vivi_内测性能基准v1.txt（date_21）|
 | M5 | 24 | +Vivi_内测性能基准v2.txt（date_28）|
-| M6 | 20 | +Vivi_生产环境性能报告v3.txt（date_38）|
+| M6 | 22 | +Vivi_生产环境性能报告v3.txt（date_38）|
 
-**总计：92 个文件**
+**总计：94 个文件**
 
 ---
 
 *本文档用于 RAG vs llm_wiki 对比验证实验设计。*
-*数据来源：WeBot Demo Dataset v2（6周/5人/92文件/决策反复+性能多版本）*
+*数据来源：WeBot Demo Dataset v2（6周/5人/94文件/决策反复+性能多版本）*
