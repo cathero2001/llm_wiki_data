@@ -1,17 +1,16 @@
-|【类型】email记录
-|【日期】{{date_23}}
-|【发件人】Peter
-|【收件人】Sally
-|【主题】青云签约意向确认
-|【正文】
+发件人：Peter Lin <peter@starvision.com>
+收件人：Sally <sally@starvision.com>
+日期：2026-04-10（对应 {{date_23}}）
+主题：青云签约意向确认
+
 Sally，
 
 收到，已了解青云确认签约意向。
 
 技术方案已更新：
-- 已完成Milvus切换
-- 青云定制版ReleaseNote已准备
-- 技术文档齐全
+- 已完成 Milvus 切换
+- 青云定制版 ReleaseNote 已准备
+- 技术文档齐全（部署指南、运维手册、API文档）
 
 请告知客户侧签约流程，我们需要准备哪些材料？
 
