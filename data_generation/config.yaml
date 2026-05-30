@@ -1,0 +1,144 @@
+# ============================================================
+# llm_wiki 数据集配置文件
+# ============================================================
+# 使用前必读：
+#   1. 只需要修改 anchor_date 为 demo 当天的日期
+#   2. 运行 convert_dates.py 重算所有文件中的日期
+#   3. 将 output/ 目录下的文件导入 llm_wiki
+# ============================================================
+
+# 【核心设置】demo 当天的日期（每次 demo 前改这里）
+anchor_date: "2026-04-28"
+
+# 项目开始日期（不变）
+project_start: "2026-03-16"
+
+# 项目总天数
+duration_days: 43
+
+# ============================================================
+# 项目基本信息（不变）
+# ============================================================
+project:
+  name: "WeBot 企业知识库助手"
+  code: "Iris"
+  budget: "700万人民币"
+  duration_weeks: 6
+  launch_date: "2026-04-28"
+
+# 团队成员
+team:
+  - role: "项目经理"
+    name: "Poky Wu"
+    email: "poky@starvision.com"
+  - role: "产品经理"
+    name: "Peter Lin"
+    email: "peter@starvision.com"
+  - role: "技术负责人"
+    name: "Dave Liu"
+    email: "dave@starvision.com"
+  - role: "后端开发"
+    name: "Somi"
+    email: "somi@starvision.com"
+  - role: "前端开发"
+    name: "Sophie"
+    email: "sophie@starvision.com"
+  - role: "测试/运营"
+    name: "Vivi"
+    email: "vivi@starvision.com"
+  - role: "销售"
+    name: "Sally"
+    email: "sally@starvision.com"
+
+# 客户管线
+customers:
+  - name: "青云科技"
+    stage: "已签约"
+    willingness: "高"
+    key_event: "4月8日签约，首批50席位"
+  - name: "智远银行"
+    stage: "试点谈判"
+    willingness: "中"
+    key_event: "4月15日提出私有化需求，内部讨论中等"
+  - name: "明日家居"
+    stage: "评估中"
+    willingness: "中"
+    key_event: "4月18日发竞品对比表，还在比较"
+  - name: "恒通物流"
+    stage: "意向"
+    willingness: "低"
+    key_event: "4月20日发资料后无回复"
+
+# ============================================================
+# 日期映射表（自动计算，勿手动修改）
+# ============================================================
+# 计算公式：date_N = project_start + N 天
+# 例如：date_0 = 2026-03-16, date_7 = 2026-03-23, ...
+# anchor_date = 2026-04-28 时，date_42 = 2026-04-28
+
+dates:
+  date_0:   "2026-03-16"   # project_start
+  date_7:   "2026-03-23"
+  date_14:  "2026-03-30"
+  date_21:  "2026-04-07"
+  date_28:  "2026-04-14"
+  date_35:  "2026-04-21"
+  date_42:  "2026-04-28"   # anchor_date 当天
+
+# ============================================================
+# 里程碑定义
+# ============================================================
+milestones:
+  - id: "M1"
+    name: "项目启动"
+    day_offset: 0           # 相对于 project_start
+    target_date: "2026-03-16"
+    description: "立项、团队组建、需求收集"
+  - id: "M2"
+    name: "方案确认"
+    day_offset: 7
+    target_date: "2026-03-23"
+    description: "技术方案评审、架构设计冻结"
+  - id: "M3"
+    name: "原型完成"
+    day_offset: 14
+    target_date: "2026-03-30"
+    description: "MVP开发、首批功能上线内测"
+  - id: "M4"
+    name: "测试迭代"
+    day_offset: 21
+    target_date: "2026-04-07"
+    description: "内测反馈收集、功能迭代"
+  - id: "M5"
+    name: "优化上线"
+    day_offset: 28
+    target_date: "2026-04-14"
+    description: "功能和性能优化、准备发布"
+  - id: "M6"
+    name: "正式发布"
+    day_offset: 42
+    target_date: "2026-04-28"
+    description: "WeBot上线运营、客户支持"
+
+# ============================================================
+# 各阶段包含的文件清单（相对路径，相对于 data_template/）
+# ============================================================
+phases:
+  phase_m1:
+    name: "M1 项目启动"
+    includes: []
+  phase_m2:
+    name: "M2 方案确认"
+    includes: []
+  phase_m3:
+    name: "M3 MVP开发"
+    includes: []
+  phase_m4:
+    name: "M4 内测迭代"
+    includes: []
+  phase_m5:
+    name: "M5 发布准备"
+    includes: []
+  phase_m6:
+    name: "M6 正式发布"
+    includes: []
