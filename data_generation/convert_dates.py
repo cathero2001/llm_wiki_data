@@ -348,8 +348,6 @@ def main():
             _ = generate_phase_output(args.template_dir, args.output_dir, date_map, config, dry_run=True)
         # generate_sources_output 也干跑
         print()
-        print("llm_wiki sources 目录预览：")
-        generate_sources_output(args.output_dir, dry_run=True)
     else:
         print("【执行模式】开始处理文件...")
         print()
@@ -367,26 +365,15 @@ def main():
         for phase_name, phase_output, _ in all_phase_dirs:
             print(f"  ✓ {phase_name}/ 已生成")
 
-        # 生成 llm_wiki 可直接导入的 sources 目录
-        print(f"生成 llm_wiki 导入目录...")
-        generate_sources_output(args.output_dir, dry_run=False)
-        for phase_name, _, _ in all_phase_dirs:
-            sources_dir = Path(args.output_dir) / phase_name / "sources"
-            if sources_dir.exists():
-                count = len(list(sources_dir.glob("*")))
-                print(f"  ✓ {phase_name}/sources/ ({count} files)")
-
         print()
         print("=" * 60)
         print("完成！")
         print(f"全量数据：{args.output_dir}/")
         for phase_name, _, _ in all_phase_dirs:
             print(f"分批数据：{args.output_dir}/{phase_name}/")
-            print(f"  可直接导入：cp -r {args.output_dir}/{phase_name}/sources/* <llm_wiki_raw_sources>/")
         print()
         print("下一步：")
-        print(f"  1. 将 output/{{phase}}/sources/ 下的文件导入 llm_wiki（手动 Import 按钮）")
-        print(f"  2. 或将整个 sources/ 目录覆盖到 llm_wiki 的 raw/sources/")
+        print("  将 output/{phase}/ 下的文件导入 llm_wiki（New Project → Import）")
         print("=" * 60)
 
     return 0
