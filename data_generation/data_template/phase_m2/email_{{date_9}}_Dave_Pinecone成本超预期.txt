@@ -1,6 +1,6 @@
 发件人：Dave Liu <dave@starvision.com>
 收件人：Peter Lin <peter@starvision.com>
-日期：2026-03-25 14:00
+日期：{{date_9}} 14:00
 主题：紧急：Pinecone 成本超预期
 
 Peter，

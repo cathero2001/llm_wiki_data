@@ -1,6 +1,6 @@
 发件人：Sally <sally@starvision.com>
 收件人：Peter Lin <peter@starvision.com>
-日期：2026-04-11（对应 {{date_24}}）
+日期：{{date_24}}
 主题：青云报价确认
 
 Peter，

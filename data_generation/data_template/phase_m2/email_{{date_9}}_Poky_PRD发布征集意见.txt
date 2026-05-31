@@ -1,6 +1,6 @@
 发件人：Poky Wu <poky@starvision.com>
 收件人：全体项目组 <all@starvision.com>
-日期：2026-03-25 09:30
+日期：{{date_9}} 09:30
 主题：PRD v1.0 发布，请大家在一周内提意见
 
 团队，

@@ -1,6 +1,6 @@
 发件人：Dave Liu <dave@starvision.com>
 收件人：全体项目组 <all@starvision.com>
-日期：2026-03-26 10:00
+日期：{{date_10}} 10:00
 主题：技术方案确认通知
 
 团队，

@@ -80,9 +80,9 @@ dates:
   date_0:   "2026-03-16"   # project_start
   date_7:   "2026-03-23"
   date_14:  "2026-03-30"
-  date_21:  "2026-04-07"
-  date_28:  "2026-04-14"
-  date_35:  "2026-04-21"
+  date_21:  "2026-04-06"   # project_start + 21 天
+  date_28:  "2026-04-13"   # project_start + 28 天
+  date_35:  "2026-04-20"   # project_start + 35 天
   date_42:  "2026-04-28"   # anchor_date 当天
 
 # ============================================================
@@ -107,12 +107,12 @@ milestones:
   - id: "M4"
     name: "测试迭代"
     day_offset: 21
-    target_date: "2026-04-07"
+    target_date: "2026-04-06"
     description: "内测反馈收集、功能迭代"
   - id: "M5"
     name: "优化上线"
     day_offset: 28
-    target_date: "2026-04-14"
+    target_date: "2026-04-13"
     description: "功能和性能优化、准备发布"
   - id: "M6"
     name: "正式发布"

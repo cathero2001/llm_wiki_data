@@ -1,6 +1,6 @@
 发件人：Peter Lin <peter@starvision.com>
 收件人：Sally <sally@starvision.com>
-日期：2026-04-10（对应 {{date_23}}）
+日期：{{date_23}}
 主题：青云签约意向确认
 
 Sally，

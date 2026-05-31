@@ -1,6 +1,6 @@
 【飞书群聊记录】
 群组：WeBot 项目组
-日期：2026-03-24
+日期：{{date_8}}
 参与人：Dave、Somi、Peter
 
 【讨论1：Pinecone 成本问题】
