@@ -27,7 +27,7 @@ llm_wiki/
 ├── data_generation/
 │   ├── config.yaml              # ← 改这里：anchor_date（demo当天日期）
 │   ├── convert_dates.py         # ← 运行这个：日期重算脚本
-│   ├── prompt.txt               # 数据生成指令
+│   ├── AGENT_PROMPT.md               # 数据生成指令
 │   ├── GUIDE.md                 # 操作指南
 │   ├── STORY.md                 # 故事线文档（Demo观众提前阅读）
 │   ├── COMPARISON_GUIDE.md      # RAG vs llm_wiki 对比验证攻略

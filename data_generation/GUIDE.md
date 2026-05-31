@@ -28,7 +28,7 @@ data_generation/
 ├── config.yaml              ← 改这里（anchor_date）
 ├── convert_dates.py         ← 运行这个（日期重算）
 ├── GUIDE.md                 ← 本文件
-├── prompt.txt               ← 给 AI Agent 的生成指令
+├── AGENT_PROMPT.md               ← 给 AI Agent 的生成指令
 ├── STORY.md                 ← 故事线文档（Demo 观众提前阅读）
 ├── COMPARISON_GUIDE.md      ← RAG vs llm_wiki 对比验证攻略
 ├── 数据集设计背景和要求.md   ← 背景参考
