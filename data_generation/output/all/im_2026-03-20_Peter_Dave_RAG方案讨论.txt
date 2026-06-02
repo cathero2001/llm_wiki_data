@@ -1,0 +1,24 @@
+【IM讨论记录】
+日期：2026-03-20
+参与人：Peter、Dave
+
+【讨论内容】
+
+Peter：技术方案初稿什么时候能给？我 PRD v0.5 写好了，等着对齐。
+
+Dave：明天（2026-03-21）给你。RAG 框架用 LangChain，向量数据库先用 Pinecone。
+
+Peter：LangChain 靠谱吗？听说坑不少。
+
+Dave：目前最成熟的，文档和社区都活跃。我们先跑通 MVP 再说。后期如果有问题可以换。
+
+Peter：好。另外 Pinecone 月费 8,000 心里没底，能便宜点吗？
+
+Dave：我让 Somi 看了，Pinecone 有 Starter 方案，500美元/月约3,500元，先用这个。
+
+Peter：行。另外我 PRD 里提到多格式支持，这个优先级怎么排？
+
+Dave：MVP 先做 PDF 和 Word，PPT 和 Markdown 后置。
+
+【结论】
+技术方案 2026-03-21 输出。MVP 先支持 PDF 和 Word。
